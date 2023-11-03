@@ -1,27 +1,138 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* common */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  background-image: url('https://i.pinimg.com/564x/c4/bb/20/c4bb203e01618cde99bc130d6c3535db.jpg');
+  background-repeat: no-repeat;
+  background-size: 600px 1110px;
+  background-position: center;
+  font-family: 'Noto Serif KR', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a{
+  text-decoration: none;
+  color: #3a5a40;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* main */
+main{
+  text-align: center;
+  padding-top: 1.250em;
+}
+
+.main_title {
+  font-size: 2.5rem;
+}
+
+.main_list{
+  height: 10.625em;
+  width: auto;
+  position: relative;
+}
+
+ul{
+  position: absolute;
+  box-sizing: border-box;
+  width: 12.500em;
+  left: 0;
+  right: 0;
+  margin: 1.250em auto;
+}
+
+ul >li{
+  margin-bottom: 1.250em;
+  font-size: 0.938rem;
+  color: #3a5a40;
+  background:linear-gradient(to right, transparent 50%, #dda25e8c 50%);
+  background-size: 200%;
+  transition: .3s;
+  font-weight: 700;
+}
+
+ul >li:hover{
+  background-position: -100% 0;
+  color: #fefae0;
+}
+
+/* list */
+.list{
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.list >ol{
+  width: 12.500em;
+}
+
+/* create */
+.input_title >input{
+  background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fefae0;
+    outline: none;
+    margin: 40px 0 10px;
+    color: #fefae0;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.input_body >textarea{
+  background-color: transparent;
+    width: 31.250em;
+    height: 8.750em;
+    border: 2px solid #fefae0;
+    font-family: 'Noto Serif KR', serif;
+    color: #fefae0;
+    outline: none;
+    margin-bottom: 1.250em;
+    padding: 0.625em;
+    box-sizing: border-box;
+}
+
+.input_btn >input{
+  background-color: transparent;
+  border: none;
+  font-size: 1.125rem;
+  font-family: 'Noto Serif KR', serif;
+  color: #fefae0;
+  font-weight: 700;
+  transition: .1s;
+}
+
+.input_btn >input:hover{
+  background-color: #3a5a40b2;
+}
+
+/* read */
+.read_main{
+  padding: 30px 20px;
+  font-family: 'Noto Serif KR', serif;
+  color: #3a5a40b2;
+  font-weight: 700;
+  width: auto;
+}
+
+.read_title{
+  border-bottom: 2px solid #fefae0;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.read_body{
+  margin-top: 20px;
+}
+
+/* delete */
+.btn-delete{
+  list-style: none;
+}
+
+.btn-delete >input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fefae0;
+  font-size: 0.938rem;
+  color: #fefae0;
+  font-family: 'Noto Serif KR', serif;
 }
