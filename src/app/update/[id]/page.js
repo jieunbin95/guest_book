@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 
 export default function Update(){
   const router=useRouter()
-  const [title,setTitle]=useState()
-  const [body,setBody]=useState()
-  const {id}=useParams()
+  const [title,setTitle]=useState('')
+  const [body,setBody]=useState('')
+  const params=useParams()
+  const id=params.id
 
   useEffect(()=>{
-    fetch(process.env.NEXT_PUBLIC_API_URL+`topics/${id}`)
+    fetch(process.env.NEXT_PUBLIC_API_URL+'topics/'+id)
    .then(res=>res.json())
    .then(result=>{
     setTitle(result.title)
