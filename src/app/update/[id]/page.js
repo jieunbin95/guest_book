@@ -24,7 +24,7 @@ export default function Update(){
       const title=e.target.title.value
       const body=e.target.body.value 
       const options={
-        method:'PUT',
+        method:'PATCH',
         headers:{
           'Content-Type': 'application/json'
         },
