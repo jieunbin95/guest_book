@@ -16,7 +16,7 @@ export default function Update(){
     setTitle(result.title)
     setBody(result.body)
    })
-  },[])
+  },[id])
 
   return (
     <form onSubmit={(e)=>{
